@@ -1,0 +1,341 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7s5qnaw0pmwk"]
+
+[ext_resource type="Shader" uid="uid://dadbc355rf2kh" path="res://scenes/background.gdshader" id="2_7ddre"]
+[ext_resource type="Texture2D" uid="uid://7f875oms6fs5" path="res://playstation4_touchpad_press.svg" id="3_qjeyg"]
+[ext_resource type="Script" uid="uid://7h3cbl6sxa75" path="res://scenes/scrolling_background.gd" id="4_3qnke"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7ddre"]
+light_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wtsjf"]
+shader = ExtResource("2_7ddre")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.4088042, 0.7590933, 1, 0.11372549)
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_7ddre")
+position = Vector2(529.05, 283)
+rotation = -0.47996554
+scale = Vector2(1.402, 1.327)
+texture = ExtResource("3_qjeyg")
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 1000)
+script = ExtResource("4_3qnke")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.54896253, 0.5489626, 0.5489625, 1)
+material = SubResource("ShaderMaterial_wtsjf")
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qjeyg")
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Power" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+custom_minimum_size = Vector2(147.145, 0)
+layout_mode = 2
+text = "Power"
+
+[node name="Mining" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+editor_description = "I might rename this to ordering since you are on a space ship and order idea"
+custom_minimum_size = Vector2(147.145, 0)
+layout_mode = 2
+text = "Order"
+
+[node name="Production" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+custom_minimum_size = Vector2(147.145, 0)
+layout_mode = 2
+text = "Production"
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+custom_minimum_size = Vector2(147.145, 0)
+layout_mode = 2
+text = "Advanced production"
+
+[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+custom_minimum_size = Vector2(147.145, 0)
+layout_mode = 2
+text = "Oil processing"
+
+[node name="Button7" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+custom_minimum_size = Vector2(147.145, 0)
+layout_mode = 2
+text = "Quantum"
+
+[node name="Button8" type="Button" parent="MarginContainer/VBoxContainer2/Buttons"]
+custom_minimum_size = Vector2(147.145, 0)
+layout_mode = 2
+text = "Research"
+
+[node name="PowerPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2/PowerPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Solar"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Steam"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Quantum"
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "Small solar array"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "Small solar array"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "Small solar array"
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer2/PowerPanel/MarginContainer/VBoxContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "Small solar array"
+
+[node name="OrderPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2/OrderPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(76.21, 0)
+layout_mode = 2
+text = "Solids"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(76.21, 0)
+layout_mode = 2
+text = "Liquids"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(76.21, 0)
+layout_mode = 2
+text = "Gases"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Iron ore"
+alignment = 0
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Copper ore"
+alignment = 0
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Steel ore"
+alignment = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/OrderPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProductionPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer2/ProductionPanel"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel"]
+layout_mode = 0
+offset_right = 1102.0
+offset_bottom = 563.0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(76.21, 0)
+layout_mode = 2
+text = "Solids"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(76.21, 0)
+layout_mode = 2
+text = "Liquids"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(76.21, 0)
+layout_mode = 2
+text = "Gases"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Iron ore"
+alignment = 0
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Copper ore"
+alignment = 0
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Steel ore"
+alignment = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer2/ProductionPanel/Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="AdvancedCrafting" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+bbcode_enabled = true
+text = "Advanced crafting:
+"
+
+[node name="BasicCrafting" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+bbcode_enabled = true
+text = "Basic crafting:
+"
+
+[node name="Craft" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Craft"
+
+[node name="SelectRecipe" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+item_count = 3
+item_0/text = "Pipe"
+item_1/text = "Gear"
+item_2/text = "Engine"
+
+[node name="Button" type="Button" parent="MarginContainer"]
+visible = false
+layout_mode = 2

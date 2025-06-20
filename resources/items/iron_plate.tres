@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=2 format=3 uid="uid://0ww805aky0p5"]
+
+[ext_resource type="Script" uid="uid://dt2w3egk82pb4" path="res://scripts/ingredient.gd" id="1_aatmu"]
+
+[resource]
+script = ExtResource("1_aatmu")
+ingredient_type = 0
+ingredient_name = 0
+_name = "Iron plate"
+order = ""
+description = "A plate of iron."
+group = 2
+sub_group = 0
+hidden = false
+metadata/_custom_type_script = "uid://dt2w3egk82pb4"

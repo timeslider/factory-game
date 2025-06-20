@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=2 format=3 uid="uid://bud6jey3jwxp5"]
+
+[ext_resource type="Script" uid="uid://dt2w3egk82pb4" path="res://scripts/ingredient.gd" id="1_bl2vt"]
+
+[resource]
+script = ExtResource("1_bl2vt")
+ingredient_type = 0
+ingredient_name = 0
+_name = "Carbon fiber"
+order = ""
+description = "A bundle of nano-thin fibers made from carbon"
+group = 0
+sub_group = 0
+hidden = false
+metadata/_custom_type_script = "uid://dt2w3egk82pb4"

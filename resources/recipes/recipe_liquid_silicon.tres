@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=3 format=3 uid="uid://wluxtopt8gh7"]
+
+[ext_resource type="Script" uid="uid://dt2w3egk82pb4" path="res://scripts/ingredient.gd" id="1_1xikm"]
+[ext_resource type="Script" uid="uid://bigg5oaldgmni" path="res://scripts/recipe.gd" id="2_g76ah"]
+
+[resource]
+script = ExtResource("2_g76ah")
+category = 1
+input_ingredients = Dictionary[ExtResource("1_1xikm"), int]({})
+output_ingredients = Dictionary[ExtResource("1_1xikm"), int]({})
+duration = 1.0
+_name = "Liquid silicon"
+order = ""
+description = "Silicon that is colder than usual"
+group = 0
+sub_group = 0
+hidden = false
+metadata/_custom_type_script = "uid://bigg5oaldgmni"

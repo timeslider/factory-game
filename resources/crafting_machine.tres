@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CraftingMachine" load_steps=2 format=3 uid="uid://blxe0brnlykhk"]
+
+[ext_resource type="Script" uid="uid://bu27le23sn6fh" path="res://scripts/crafting_machine.gd" id="1_i2ox5"]
+
+[resource]
+script = ExtResource("1_i2ox5")
+_name = ""
+inputs = Dictionary[int, int]({})
+metadata/_custom_type_script = "uid://bu27le23sn6fh"

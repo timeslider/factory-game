@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=2 format=3 uid="uid://bn45jcfug1w47"]
+
+[ext_resource type="Script" uid="uid://dt2w3egk82pb4" path="res://scripts/ingredient.gd" id="1_libpx"]
+
+[resource]
+script = ExtResource("1_libpx")
+type = null
+metadata/_custom_type_script = "uid://dt2w3egk82pb4"
